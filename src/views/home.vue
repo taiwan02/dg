@@ -2,7 +2,23 @@
   <div class="content">
     <div class="top">
       <div class="top-heeader">
-        <div class="top-left">北方的文先生</div>
+        <div class="top-left">
+          <!-- <span class="left-item">北方的文先生</span> -->
+          <span
+            class="left-item"
+            @click="
+              AddFavorite('文先生软件', 'http://zhaoxiaozhang.gitee.io/wenxs')
+            "
+            >收藏本站</span
+          >
+          <span
+            class="left-item"
+            @click="
+              toDesktop('文先生软件', 'http://zhaoxiaozhang.gitee.io/wenxs')
+            "
+            >添加到桌面</span
+          >
+        </div>
         <div class="top-right">
           <span class="right-item" @click="dialogVisible = true">赞助</span>
           <span class="right-item" @click="dialogVisible2 = true">关于</span>
@@ -36,7 +52,7 @@
     </div>
     <div class="center">
       <el-card class="box-card">
-        <el-collapse v-model="activeNames">
+        <el-collapse>
           <el-collapse-item
             class="list-item"
             name="1"
@@ -137,9 +153,25 @@ export default {
         window.open('https://jq.qq.com/?_wv=1027&k=c9CfkxlS')
       }
     },
-    handleChange(val) {
-      console.log(val)
-    }
+    AddFavorite(title, url) {
+      var ua = navigator.userAgent.toLowerCase()
+      if (ua.indexOf('360se') > -1) {
+        alert('由于360浏览器功能限制，请按 Ctrl+D 手动收藏！')
+      } else if (ua.indexOf('msie 8') > -1) {
+        window.external.AddToFavoritesBar(url, title) //IE8
+      } else if (document.all) {
+        try {
+          window.external.addFavorite(url, title)
+        } catch (e) {
+          alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!')
+        }
+      } else if (window.sidebar) {
+        window.sidebar.addPanel(title, url, '')
+      } else {
+        alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!')
+      }
+    },
+    toDesktop() {}
   }
 }
 </script>
@@ -172,10 +204,15 @@ export default {
       color: #eeeeee;
       .top-left {
         cursor: pointer;
+        .left-item {
+          cursor: pointer;
+          margin-right: 15px;
+        }
+        .left-item:hover {
+          color: #ffffff;
+        }
       }
-      .top-left:hover {
-        color: #ffffff;
-      }
+
       .top-right {
         font-size: 14px;
         .right-item {
