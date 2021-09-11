@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: '/wenxs/',
+  publicPath: "/wenxs/",
   productionSourceMap: false,
-}
+};
