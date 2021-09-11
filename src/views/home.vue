@@ -93,7 +93,7 @@
             </template>
             <div>软件框架：OnoQQ</div>
             <div>
-              下载地址：<el-link type="primary" @click="joinGroup"
+              下载地址：<el-link type="primary" @click="joinGroup('https://jq.qq.com/?_wv=1027&k=c9CfkxlS')"
                 >交流群内下载</el-link
               >
             </div>
@@ -137,10 +137,11 @@ export default {
   },
   methods: {
     joinGroup(url) {
-      if (url) {
-        window.open(url)
-      } else {
+      console.log('url', url);
+      if (!url) {
         window.open('https://jq.qq.com/?_wv=1027&k=c9CfkxlS')
+      } else {
+        window.open(url)
       }
     },
     AddFavorite(title, url) {
@@ -167,16 +168,6 @@ export default {
         });
       }
     },
-    toDesktop(sName, sUrl) {
-      try{
-        var WshShell = new ActiveXObject("WScript.Shell");
-        var oUrlLink = WshShell.CreateShortcut(WshShell.SpecialFolders("Desktop") + "\\" + sName + ".url");
-        oUrlLink.TargetPath = sUrl;
-        oUrlLink.Save();
-        }catch(e){
-        alert("当前IE安全级别不允许操作！");
-        }
-    }
   }
 }
 </script>
