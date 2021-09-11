@@ -11,13 +11,6 @@
             "
             >收藏本站</span
           >
-          <span
-            class="left-item"
-            @click="
-              toDesktop('文先生软件', 'http://zhaoxiaozhang.gitee.io/wenxs')
-            "
-            >添加到桌面</span
-          >
         </div>
         <div class="top-right">
           <span class="right-item" @click="dialogVisible = true">赞助</span>
@@ -27,9 +20,6 @@
       <div class="top-content">
         <div class="title">北方的文先生</div>
         <div class="tips">一个专注写软件的人</div>
-        <!-- <div class="title">爱上的角度看</div>
-        <div class="tips">阿斯利康阿萨快乐</div> -->
-        <!-- <div class="groups" @click="joinGroup">交流群：1030654942</div> -->
         <el-tooltip placement="bottom" effect="light">
           <div slot="content" class="group-img-wrap">
             <el-image
@@ -156,22 +146,37 @@ export default {
     AddFavorite(title, url) {
       var ua = navigator.userAgent.toLowerCase()
       if (ua.indexOf('360se') > -1) {
-        alert('由于360浏览器功能限制，请按 Ctrl+D 手动收藏！')
+        this.$alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!', '温馨提示', {
+          confirmButtonText: '知道了',
+        });
       } else if (ua.indexOf('msie 8') > -1) {
         window.external.AddToFavoritesBar(url, title) //IE8
       } else if (document.all) {
         try {
           window.external.addFavorite(url, title)
         } catch (e) {
-          alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!')
+          this.$alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!', '温馨提示', {
+            confirmButtonText: '知道了',
+          });
         }
       } else if (window.sidebar) {
         window.sidebar.addPanel(title, url, '')
       } else {
-        alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!')
+        this.$alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!', '温馨提示', {
+          confirmButtonText: '知道了',
+        });
       }
     },
-    toDesktop() {}
+    toDesktop(sName, sUrl) {
+      try{
+        var WshShell = new ActiveXObject("WScript.Shell");
+        var oUrlLink = WshShell.CreateShortcut(WshShell.SpecialFolders("Desktop") + "\\" + sName + ".url");
+        oUrlLink.TargetPath = sUrl;
+        oUrlLink.Save();
+        }catch(e){
+        alert("当前IE安全级别不允许操作！");
+        }
+    }
   }
 }
 </script>
