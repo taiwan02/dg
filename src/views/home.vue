@@ -1,43 +1,45 @@
 <template>
   <div class="content">
     <div class="top">
-      <div class="top-heeader">
-        <div class="top-left">
-          <!-- <span class="left-item">北方的文先生</span> -->
-          <span
-            class="left-item"
-            @click="
-              AddFavorite('文先生软件', 'http://zhaoxiaozhang.gitee.io/wenxs')
-            "
-            >收藏本站</span
-          >
-        </div>
-        <div class="top-right">
-          <span class="right-item" @click="dialogVisible = true">赞助</span>
-          <span class="right-item" @click="dialogVisible2 = true">关于</span>
-        </div>
-      </div>
-      <div class="top-content">
-        <div class="title">黑猫软件中心</div>
-        <div class="tips">一个专注写软件的人</div>
-        <el-tooltip placement="bottom" effect="light">
-          <div slot="content" class="group-img-wrap">
-            <el-image
-              class="group-img"
-              style="width: 200px; height: 200px"
-              :src="require('../assets/jlq.jpg')"
-            ></el-image>
+      <div class="top-wrrap">
+        <div class="top-heeader">
+          <div class="top-left">
+            <!-- <span class="left-item">北方的文先生</span> -->
+            <span
+              class="left-item"
+              @click="
+                AddFavorite('文先生软件', 'http://zhaoxiaozhang.gitee.io/wenxs')
+              "
+              >收藏本站</span
+            >
           </div>
-          <el-button
-            class="groups"
-            type="danger"
-            size="mini"
-            icon="el-icon-user-solid"
-            round
-            @click="joinGroup('https://jq.qq.com/?_wv=1027&k=c9CfkxlS')"
-            >点击加入交流群：1030654942</el-button
-          >
-        </el-tooltip>
+          <div class="top-right">
+            <span class="right-item" @click="dialogVisible = true">赞助</span>
+            <span class="right-item" @click="dialogVisible2 = true">关于</span>
+          </div>
+        </div>
+        <div class="top-content">
+          <div class="title">黑猫软件中心</div>
+          <div class="tips">一个专注写软件的人</div>
+          <el-tooltip placement="bottom" effect="light">
+            <div slot="content" class="group-img-wrap">
+              <el-image
+                class="group-img"
+                style="width: 200px; height: 200px"
+                :src="require('../assets/jlq.jpg')"
+              ></el-image>
+            </div>
+            <el-button
+              class="groups"
+              type="danger"
+              size="mini"
+              icon="el-icon-user-solid"
+              round
+              @click="joinGroup('https://jq.qq.com/?_wv=1027&k=c9CfkxlS')"
+              >点击加入交流群：1030654942</el-button
+            >
+          </el-tooltip>
+        </div>
       </div>
     </div>
     <div class="center">
@@ -98,6 +100,7 @@
               >
             </div>
           </el-collapse-item>
+          
         </el-collapse>
       </el-card>
     </div>
@@ -188,10 +191,27 @@ export default {
   }
 
   .top {
-    height: 250px;
+    height: 320px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
+    
+    background-image: url('../assets/nav-geren.jpg');
+    background-color: transparent;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    .top-wrrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(45, 45, 54, 0.54);
+    z-index: 9;
     padding-top: 20px;
+    }
     .top-heeader {
       display: flex;
       justify-content: space-between;
