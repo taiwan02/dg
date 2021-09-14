@@ -78,6 +78,9 @@
                 >https://wenxs.yuque.com/books/share/590506aa-eaf2-4830-b7b9-c1ddbfc1869e?#</el-link
               >
             </div>
+            <div>
+              体验群：324497886
+            </div>
           </el-collapse-item>
           <el-collapse-item
             class="list-item"
