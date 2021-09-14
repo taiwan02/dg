@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="top-content">
-        <div class="title">北方的文先生</div>
+        <div class="title">黑猫软件中心</div>
         <div class="tips">一个专注写软件的人</div>
         <el-tooltip placement="bottom" effect="light">
           <div slot="content" class="group-img-wrap">
@@ -87,7 +87,7 @@
                 class="header-text"
                 style="font-size: 16px; font-weight: bold"
               >
-                QQ群发器
+                黑猫群发器
               </div>
               <i class="header-icon el-icon-s-flag"></i>
             </template>
