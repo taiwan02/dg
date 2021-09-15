@@ -47,6 +47,35 @@
         <el-collapse>
           <el-collapse-item
             class="list-item"
+            name="0"
+            style="background-color: #e1f3d8"
+          >
+            <template slot="title">
+              <div
+                class="header-text"
+                style="font-size: 16px; font-weight: bold"
+              >
+                QQ框架下载
+              </div>
+              <i class="header-icon el-icon-star-on"></i>
+            </template>
+            <div>
+              小栗子：单Q免费版、多Q免费版，交流群内下载</div>
+            <div>
+              OnoQQ：<el-link
+                type="primary"
+                @click="
+                  joinGroup('https://gxxz.lanzoux.com/b05mf0yuh')
+                "
+                >https://gxxz.lanzoux.com/b05mf0yuh</el-link
+              >
+            </div>
+            <div>
+              交流群：1030654942
+            </div>
+          </el-collapse-item>
+          <el-collapse-item
+            class="list-item"
             name="1"
             style="background-color: #e1f3d8"
           >
@@ -107,7 +136,7 @@
         </el-collapse>
       </el-card>
     </div>
-    <el-dialog title="捐赠文先生" :visible.sync="dialogVisible" width="50%">
+    <el-dialog title="捐赠文先生" :visible.sync="dialogVisible">
       <div class="md-img-wrap">
         <el-image
           style="width: 180px; margin-left: 20px"
@@ -123,9 +152,13 @@
         ></el-image>
       </div>
     </el-dialog>
-    <el-dialog title="关于" :visible.sync="dialogVisible2" width="30%">
-      <div>所有软件均出自：北方的文先生</div>
-      <div>定制联系QQ：1075753601</div>
+    <el-dialog title="关于" :visible.sync="dialogVisible2" style="text-align: left">
+      <div>
+        <el-tag>所有软件均出自：北方的文先生</el-tag>
+      </div>
+      <div style="margin-top: 10px">
+        <el-tag type="warning">定制联系QQ：1075753601</el-tag>
+      </div>
     </el-dialog>
   </div>
 </template>
@@ -219,7 +252,7 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 200px;
+      padding: 0 15%;
       color: #eeeeee;
       .top-left {
         cursor: pointer;
@@ -269,7 +302,7 @@ export default {
     }
   }
   .center {
-    width: 800px;
+    width: 80%;
     margin: 0 auto;
     padding: 30px 0;
     .box-card {
