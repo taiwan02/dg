@@ -144,8 +144,8 @@
                 >交流群内下载</el-link
               >
             </div>
+            <div>功能：支持文字、图文、语音模式。 可设置随机变量，多条广告内容随机切换。</div>
           </el-collapse-item>
-          
         </el-collapse>
       </el-card>
     </div>
