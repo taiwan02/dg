@@ -20,6 +20,11 @@ const routes = [
       title: '更新记录'
     },
     component: () => import('../views/updateRecord.vue')
+  },
+  {
+    path: '/fwip',
+    name: 'fwip',
+    component: () => import('../views/fwip.vue')
   }
 ]
 
