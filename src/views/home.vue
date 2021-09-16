@@ -21,7 +21,8 @@
         <div class="top-content">
           <div class="title">黑猫软件中心</div>
           <div class="tips">一个专注写软件的人</div>
-          <el-tooltip placement="bottom" effect="light">
+          <div>
+            <el-tooltip placement="bottom" effect="light">
             <div slot="content" class="group-img-wrap">
               <el-image
                 class="group-img"
@@ -38,7 +39,19 @@
               @click="joinGroup('https://jq.qq.com/?_wv=1027&k=c9CfkxlS')"
               >点击加入交流群：1030654942</el-button
             >
+             
           </el-tooltip>
+          </div>
+          <el-button
+            style="margin-top: 30px"
+              class="groups"
+              type="warning"
+              size="mini"
+              icon="el-icon-s-goods"
+              round
+              @click="joinGroup('https://dwz.cn/khAw0BwT')"
+              >点击购买卡密</el-button
+            >
         </div>
       </div>
     </div>
