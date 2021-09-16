@@ -138,7 +138,7 @@
               </div>
               <i class="header-icon el-icon-s-flag"></i>
             </template>
-            <div>软件框架：OnoQQ</div>
+            <div>软件框架：OnoQQ Air</div>
             <div>
               下载地址：<el-link type="primary" @click="joinGroup('https://jq.qq.com/?_wv=1027&k=c9CfkxlS')"
                 >交流群内下载</el-link
