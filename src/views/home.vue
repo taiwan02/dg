@@ -74,7 +74,7 @@
             </template>
             <div>
               插件如何使用：
-              <a href="../assets/小白框架使用教程.docx" download="">小白框架使用教程.docx</a>
+              <a href="../assets/小白框架使用教程.docx" download="">框架及插件如何使用教程.docx</a>
             </div>
           </el-collapse-item>
           <el-collapse-item
