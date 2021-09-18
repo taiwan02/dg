@@ -73,8 +73,9 @@
               <i class="header-icon el-icon-s-opportunity"></i>
             </template>
             <div>
-              插件如何使用：
-              <a href="../assets/小白框架使用教程.docx" download="">框架及插件如何使用教程.docx</a>
+              插件如何使用：<el-link type="primary" @click="joinGroup('https://wenxs.yuque.com/docs/share/19982c30-7f3c-4b42-ae90-cd95b0dfd8b7')"
+                >框架及插件如何使用教程.docx</el-link
+              >
             </div>
           </el-collapse-item>
           <el-collapse-item
