@@ -60,6 +60,25 @@
         <el-collapse>
           <el-collapse-item
             class="list-item"
+            name="100"
+            style="background-color: #e1f3d8"
+          >
+            <template slot="title">
+              <div
+                class="header-text"
+                style="font-size: 16px; font-weight: bold"
+              >
+                小白必看
+              </div>
+              <i class="header-icon el-icon-s-opportunity"></i>
+            </template>
+            <div>
+              插件如何使用：
+              <a href="../assets/小白框架使用教程.docx" download="">小白框架使用教程.docx</a>
+            </div>
+          </el-collapse-item>
+          <el-collapse-item
+            class="list-item"
             name="0"
             style="background-color: #e1f3d8"
           >
