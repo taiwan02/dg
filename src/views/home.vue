@@ -93,7 +93,7 @@
               <i class="header-icon el-icon-star-on"></i>
             </template>
             <div>
-              小栗子：单Q免费版、多Q免费版，交流群内下载</div>
+              小栗子：单Q免费版，交流群内下载</div>
             <div>
               OnoQQ：<el-link
                 type="primary"
@@ -125,8 +125,8 @@
             <div>
               下载地址：<el-link
                 type="primary"
-                @click="joinGroup('https://bbs.xiaolz.cn/thread-3450-1-6.html')"
-                >https://bbs.xiaolz.cn/thread-3450-1-6.html</el-link
+                @click="joinGroup('https://jq.qq.com/?_wv=1027&k=c9CfkxlS')"
+                >1030654942</el-link
               >
             </div>
             <div>
