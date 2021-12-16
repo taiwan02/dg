@@ -42,7 +42,7 @@
              
           </el-tooltip>
           </div>
-          <el-button
+          <!-- <el-button
             style="margin-top: 30px"
               class="groups"
               type="warning"
@@ -51,7 +51,7 @@
               round
               @click="joinGroup('https://dwz.cn/khAw0BwT')"
               >点击购买卡密</el-button
-            >
+            > -->
         </div>
       </div>
     </div>
